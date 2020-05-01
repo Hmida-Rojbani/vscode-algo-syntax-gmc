@@ -22,7 +22,7 @@
 			}]
 		},
 		"function_name": {
-			"begin": "ALGORITHME ",
+			"begin": "PROGRAM ",
 			"end": "\n",
 			"patterns": [{
 				"name": "entity.name.class",
@@ -50,7 +50,7 @@
 			"end": "",
 			"patterns": [{
 				"name": "keyword.control.algo",
-				"match": "\\b(ALGORITHME?|DEBUT|FIN.*|Lire|Ecrire|VARIABLE|CONSTANTE|FONCTION|SI|POUR|TANTQUE|FAIRE|PAS DE|ALORS|SINON|ET|OU|SELON)\\b"
+				"match": "\\b(PROGRAM?|START|END.*|Read|Write|VAR|CONST|FUNCTION|IF|FOR|TO|REPEAT|UNTIL|WHILE|DO|STEP|THAN|ELSE|AND|OR|SWITCH)\\b"
 			}]
 		},
 		"arithmetic_operators": {
@@ -66,7 +66,7 @@
 			"end": "",
 			"patterns": [{
 				"name": "constant.character",
-				"match": "\\b(VRAI|FAUX|NULL)\\b"
+				"match": "\\b(TRUE|FALSE|NULL)\\b"
 			}]
 		},
 		"strings": {

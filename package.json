@@ -1,0 +1,57 @@
+{
+    "name": "algo-syntx-gmc",
+    "publisher": "Hmida-Rojbani",
+    "author": "Hmida Rojbani",
+    "displayName": "algo-gmc",
+    "description": "Algorithm syntax GMC",
+    "version": "0.1.1",
+    "engines": {
+        "vscode": ">=1.34.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "contributes": {
+        "languages": [
+            {
+                "id": "algo",
+                "aliases": [
+                    "Algorithm",
+                    "algo"
+                ],
+                "extensions": [
+                    "algo"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "algo",
+                "scopeName": "source.algo",
+                "path": "./syntaxes/algo.tmLanguage.json"
+            }
+        ],
+        "snippets": [
+            {
+                "language": "algo",
+                "path": "./snippets.json"
+            }
+        ],
+        "colors": [
+            {
+                "id": "algo.error",
+                "description": "Color for error message in the status bar.",
+                "defaults": {
+                    "dark": "errorForeground",
+                    "light": "errorForeground",
+                    "highContrast": "#010203"
+                }
+            }
+        ]
+    }
+}

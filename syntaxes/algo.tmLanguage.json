@@ -1,0 +1,92 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Algorithm",
+	"patterns": [
+		{ "include": "#keywords" },
+		{ "include": "#strings" },
+		{ "include": "#comments" },
+		{ "include": "#arithmetic_operators" },
+		{ "include": "#specials" },
+		{ "include": "#caracters" },
+		{ "include": "#function_call" },
+		{ "include": "#question"},
+		{ "include": "#function_name" }
+	],
+	"repository": {
+		"question": {
+			"begin": "",
+			"end": "",
+			"patterns": [{
+				"name": "markup.heading",
+				"match": "^(\\d+\\)\\s+\\w+|\\w|[*#-]).*"
+			}]
+		},
+		"function_name": {
+			"begin": "ALGORITHME ",
+			"end": "\n",
+			"patterns": [{
+				"name": "entity.name.class",
+				"match": "\\w+"
+			}]
+		},
+		"function_call": {
+			"begin": "",
+			"end": "",
+			"patterns": [{
+				"name": "emphasis",
+				"match": "\\b[\\w_-]+\\("
+			}]
+		},
+		"comments": {
+			"begin": "",
+			"end": "",
+			"patterns": [{
+				"name": "comment.line.algo",
+				"match": "(//\\s*.+|/\\*[.\\s\\S\\r\\n]+\\*/)"
+			}]
+		},
+		"keywords": {
+			"begin": "",
+			"end": "",
+			"patterns": [{
+				"name": "keyword.control.algo",
+				"match": "\\b(ALGORITHME?|DEBUT|FIN.*|Lire|Ecrire|VARIABLE|CONSTANTE|FONCTION|SI|POUR|TANTQUE|FAIRE|PAS DE|ALORS|SINON|ET|OU|SELON)\\b"
+			}]
+		},
+		"arithmetic_operators": {
+			"begin": "",
+			"end": "",
+			"patterns": [{
+				"name": "keyword.operator",
+				"match": "\\b([+-/*=]|<-)\\b"
+			}]
+		},
+		"specials": {
+			"begin": "",
+			"end": "",
+			"patterns": [{
+				"name": "constant.character",
+				"match": "\\b(VRAI|FAUX|NULL)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.algo",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [{
+				"name": "constant.character.escape",
+				"match": "\".*\""
+			}]
+		},
+		"caracters": {
+			"name": "string.quoted.single",
+			"begin": "'",
+			"end": "'",
+			"patterns": [{
+				"name": "constant.character",
+				"match": "'\\w'"
+			}]
+		}
+	},
+	"scopeName": "source.algo"
+}

@@ -1,91 +1,98 @@
 {
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "Algorithm",
+	"name": "algo-Aix",
 	"patterns": [
-		{ "include": "#keywords" },
-		{ "include": "#strings" },
-		{ "include": "#comments" },
-		{ "include": "#arithmetic_operators" },
-		{ "include": "#specials" },
-		{ "include": "#caracters" },
-		{ "include": "#function_call" },
-		{ "include": "#question"},
-		{ "include": "#function_name" }
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#expression"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#string"
+		},
+		{
+			"include": "#params"
+		}
 	],
 	"repository": {
-		"question": {
-			"begin": "",
-			"end": "",
-			"patterns": [{
-				"name": "markup.heading",
-				"match": "^(\\d+\\)\\s+\\w+|\\w|[*#-]).*"
-			}]
-		},
-		"function_name": {
-			"begin": "PROGRAM ",
-			"end": "\n",
-			"patterns": [{
-				"name": "entity.name.class",
-				"match": "\\w+"
-			}]
-		},
-		"function_call": {
-			"begin": "",
-			"end": "",
-			"patterns": [{
-				"name": "emphasis",
-				"match": "\\b[\\w_-]+\\("
-			}]
-		},
-		"comments": {
-			"begin": "",
-			"end": "",
-			"patterns": [{
-				"name": "comment.line.algo",
-				"match": "(//\\s*.+|/\\*[.\\s\\S\\r\\n]+\\*/)"
-			}]
-		},
 		"keywords": {
-			"begin": "",
-			"end": "",
-			"patterns": [{
-				"name": "keyword.control.algo",
-				"match": "\\b(PROGRAM?|START|END.*|Read|Write|VAR|CONST|FUNCTION|IF|FOR|TO|REPEAT|UNTIL|WHILE|DO|STEP|THAN|ELSE|AND|OR|SWITCH)\\b"
-			}]
-		},
-		"arithmetic_operators": {
-			"begin": "",
-			"end": "",
-			"patterns": [{
-				"name": "keyword.operator",
-				"match": "\\b([+-/*=]|<-)\\b"
-			}]
-		},
-		"specials": {
-			"begin": "",
-			"end": "",
-			"patterns": [{
-				"name": "constant.character",
-				"match": "\\b(TRUE|FALSE|NULL)\\b"
-			}]
+			"patterns": [
+				{
+					"name": "comment.line",
+					"match": "//.*$"
+				},
+				{
+					"name": "comment.block",
+					"begin": "\\/\\*",
+					"end": "\\*\\/"
+				},
+				{
+					"name": "keyword.control.algo-aix",
+					"match": "\\b(DO|ELSE_IF|ELSE|PROCEDURE|FUNCTION|RETURN|BREAK|CONTINUE|FROM|TO|THAN)\\b"
+				},
+				{
+					"name": "support.type",
+					"match": "\\b(IF|WHILE|FOR|END_WHILE|END_IF|END_FOR|UNTIL|REPEAT|SWITCH|END_SWITCH)\\b"
+				},
+				{
+					"name": "variable.language",
+					"match": "\\b(declarer)\\b"
+				},
+				{
+					"name": "storage.type",
+					"match": "\\b(CHAR|STRING|ARRAY_OF|BOOLEAN|INTEGER|FLOAT)\\b"
+				},
+				{
+					"name": "constant.numeric",
+					"match": "\\b(\\d)\\b"
+				},
+				{
+					"name": "constant.language",
+					"match": "\\b(TRUE|FALSE|NULL)\\b"
+				},
+				{
+					"name": "keyword.operator",
+					"match": "\\b(:=|=|<>|<|>|<=|>=)\\b"
+				},
+				{
+					"name": "keyword.control",
+					"match": "\\b(OR|AND|NOT)\\b"
+				}
+			]
 		},
 		"strings": {
-			"name": "string.quoted.double.algo",
+			"name": "string.quoted.double.algo-aix",
 			"begin": "\"",
 			"end": "\"",
-			"patterns": [{
-				"name": "constant.character.escape",
-				"match": "\".*\""
-			}]
+			"patterns": [
+				{
+					"name": "constant.character.escape.algo-aix",
+					"match": "\\\\."
+				}
+			]
 		},
-		"caracters": {
-			"name": "string.quoted.single",
+		"string": {
+			"name": "constant.character",
 			"begin": "'",
 			"end": "'",
-			"patterns": [{
-				"name": "constant.character",
-				"match": "'\\w'"
-			}]
+			"patterns": [
+				{
+					"name": "constant.character.escape.algo-aix",
+					"match": "\\\\."
+				}
+			]
+		},
+		"expression": {
+			"name": "support.function",
+			"match": "Display|Put|Next_Line|Length|ToUpper|ToLower|Succ|Pred|Alloc|Realloc"
+		},
+		"params": {
+			"name": "variable.parameter",
+			"match": "\\b(ALGORITHM|BEGIN|END|VAR|CONST)\\b"
 		}
 	},
 	"scopeName": "source.algo"

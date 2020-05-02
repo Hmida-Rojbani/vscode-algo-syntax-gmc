@@ -1,2 +1,118 @@
 {
+	"function": {
+		"prefix": "function",
+		"body": [
+			"FUNCTION ${1:name}(${2:args}) : ${3:return_type}",
+			"BEGIN",
+            "\t$0",
+            "\tRETURN ${4:value}",
+			"END"
+		],
+		"description": "Inserting a function block"
+	},
+	"procedure": {
+		"prefix": "procedure",
+		"body": [
+			"PROCEDURE ${1:name}(${2:args})",
+			"BEGIN",
+			"\t$0",
+			"END"
+		],
+		"description": "Inserting a procedure block"
+	},
+	"algorithm": {
+		"prefix": "algorithm",
+		"body": [
+			"ALGORITHM ${1:nom}",
+			"BEGIN",
+			"\t$0",
+			"END"
+		],
+		"description": "Inserting an algorithm block"
+	},
+	"for": {
+		"prefix": "for",
+		"body": [
+			"FOR (${1:i} FROM ${2:min} TO ${3:max}) DO",
+			"\t$0",
+			"END_FOR"
+		],
+		"description": "Inserting a loop block \"for\""
+	},
+	"if": {
+		"prefix": "if",
+		"body": [
+			"IF (${1:conditon}) THAN",
+			"\t$0",
+			"END_IF"
+		],
+		"description": "Insert a block \"if\""
+	},
+	"if-else": {
+		"prefix": "if-else",
+		"body": [
+			"IF (${1:conditon}) THAN",
+			"\t$0",
+			"ELSE",
+			"\t",
+			"END_IF"
+		],
+		"description": "Insert a block \"if-else\""
+    },
+    "if-elseif-else": {
+		"prefix": "if-elseif-else",
+		"body": [
+			"IF (${1:conditon}) THAN",
+            "\t$0",
+            "ELSE_IF (${2:conditon}) THAN",
+			"\t",
+			"ELSE",
+			"\t",
+			"END_IF"
+		],
+		"description": "Insert a block \"if-elseif-else\""
+	},
+	"while": {
+		"prefix": "while",
+		"body": [
+			"WHILE (${1:condition}) DO",
+			"\t$0",
+			"END_WHILE"
+		],
+		"description": "Inserting a loop block \"While\""
+    },
+    "repeat": {
+		"prefix": "repeat",
+		"body": [
+			"REPEAT",
+			"\t$0",
+			"UNTIL (${1:condition})"
+		],
+		"description": "Inserting a loop block \"repeat-until\""
+	},
+	":=": {
+		"prefix": "assign",
+		"body": [
+			":= $0"
+		],
+		"description": "Assigning a value to a variable"
+	},
+	"declare": {
+		"prefix": "declare",
+		"body": [
+			"VAR ${1:nom} : ${2:type};"
+		]
+	},
+	"declare-assign": {
+		"prefix": "declare-assign",
+		"body": [
+			"VAR ${1:nom} : ${2:type} := ${3:valeur};"
+		]
+	},
+	"declare-constant": {
+		"prefix": "delare-constant",
+		"body": [
+			"CONST ${1:nom} : ${2:type} := ${3:valeur};"
+		]
+	}
 }

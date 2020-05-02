@@ -32,15 +32,15 @@
 				},
 				{
 					"name": "keyword.control.algo-aix",
-					"match": "\\b(DO|ELSE_IF|ELSE|PROCEDURE|FUNCTION|RETURN|BREAK|CONTINUE|FROM|TO|THAN)\\b"
+					"match": "\\b(ALGORITHM|DO|ELSE_IF|ELSE|PROCEDURE|FUNCTION|RETURN|BREAK|CONTINUE|FROM|TO|THAN)\\b"
 				},
 				{
 					"name": "support.type",
-					"match": "\\b(IF|WHILE|FOR|END_WHILE|END_IF|END_FOR|UNTIL|REPEAT|SWITCH|END_SWITCH)\\b"
+					"match": "\\b(BEGIN|END|VAR|CONST|IF|WHILE|FOR|END_WHILE|END_IF|END_FOR|UNTIL|REPEAT|SWITCH|END_SWITCH)\\b"
 				},
 				{
 					"name": "variable.language",
-					"match": "\\b(declarer)\\b"
+					"match": "\\b(xxxxxxxx)\\b"
 				},
 				{
 					"name": "storage.type",
@@ -92,7 +92,7 @@
 		},
 		"params": {
 			"name": "variable.parameter",
-			"match": "\\b(ALGORITHM|BEGIN|END|VAR|CONST)\\b"
+			"match": "\\b([_a-zA-Z]\\w*)\\b"
 		}
 	},
 	"scopeName": "source.algo"

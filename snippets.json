@@ -48,7 +48,7 @@
 	"if": {
 		"prefix": "if",
 		"body": [
-			"IF (${1:conditon}) THAN",
+			"IF (${1:conditon}) THEN",
 			"\t${2:set_instructions}",
 			"END_IF"
 		],
@@ -57,7 +57,7 @@
 	"if-else": {
 		"prefix": "if-else",
 		"body": [
-			"IF (${1:conditon}) THAN",
+			"IF (${1:conditon}) THEN",
 			"\t${2:set_instructions}",
 			"ELSE",
 			"\t${3:set_instructions}",
@@ -68,9 +68,9 @@
     "if-elseif-else": {
 		"prefix": "if-elseif-else",
 		"body": [
-			"IF (${1:conditon}) THAN",
+			"IF (${1:conditon}) THEN",
             "\t${2:set_instructions}",
-            "ELSE_IF (${3:conditon}) THAN",
+            "ELSE_IF (${3:conditon}) THEN",
 			"\t${4:set_instructions}",
 			"ELSE",
 			"\t${5:set_instructions}",

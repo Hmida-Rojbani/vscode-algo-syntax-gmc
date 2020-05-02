@@ -32,7 +32,7 @@
 				},
 				{
 					"name": "keyword.control.algo-aix",
-					"match": "\\b(ALGORITHM|DO|ELSE_IF|ELSE|PROCEDURE|FUNCTION|RETURN|BREAK|CONTINUE|FROM|TO|THAN)\\b"
+					"match": "\\b(ALGORITHM|DO|ELSE_IF|ELSE|PROCEDURE|FUNCTION|RETURN|BREAK|CONTINUE|FROM|TO|THAN|END_FUNCTION|END_PROCEDURE)\\b"
 				},
 				{
 					"name": "support.type",

@@ -88,7 +88,7 @@
 		},
 		"expression": {
 			"name": "support.function",
-			"match": "Display|Put|Next_Line|Length|ToUpper|ToLower|Succ|Pred|Alloc|Realloc"
+			"match": "Read|Write|Next_Line|Length|ToUpper|ToLower|Succ|Pred|Alloc|Realloc"
 		},
 		"params": {
 			"name": "variable.parameter",

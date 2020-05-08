@@ -39,8 +39,8 @@
 	"for": {
 		"prefix": "for",
 		"body": [
-			"FOR (${1:i} FROM ${2:min} TO ${3:max}) DO",
-			"\t${4:set_instructions}",
+			"FOR ${1:i} FROM ${2:min} TO ${3:max} STEP ${4:step}  DO",
+			"\t${5:set_instructions}",
 			"END_FOR"
 		],
 		"description": "Inserting a loop block \"for\""
@@ -160,6 +160,27 @@
 		"prefix": "boolean",
 		"body": [
 			"BOOLEAN"
+		]
+	},
+	"array-declare": {
+		"prefix": "array",
+		"body": [
+			"${1:array_name} : ARRAY_OF ${2:type}[${3:length}];"
+		]
+	},
+	"matrix-declare": {
+		"prefix": "matrix",
+		"body": [
+			"${1:matrix_name} : ARRAY_OF ${2:type}[${3:nb_line}][${4:nb_column}];"
+		]
+	},
+	"struct-declare": {
+		"prefix": "struct",
+		"body": [
+			"${1:struct_name} :\tSTRUCT",
+			"\t\t\t\t\t${2:field_name} : ${3:type};",
+			"\t\t\t\t\t${4:field_name} : ${5:type};",
+			"\t\t\t\tEND_STRUCT"
 		]
 	}
 }

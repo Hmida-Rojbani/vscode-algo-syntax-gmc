@@ -32,11 +32,11 @@
 				},
 				{
 					"name": "keyword.control.algo-aix",
-					"match": "\\b(ALGORITHM|DO|ELSE_IF|ELSE|PROCEDURE|FUNCTION|RETURN|BREAK|CONTINUE|FROM|TO|THEN|END_FUNCTION|END_PROCEDURE)\\b"
+					"match": "\\b(ALGORITHM|DO|ELSE_IF|ELSE|PROCEDURE|FUNCTION|RETURN|BREAK|CONTINUE|CASE|DEFAULT|FROM|TO|THEN|STEP|END_FUNCTION|STRUCT|END_PROCEDURE)\\b"
 				},
 				{
 					"name": "support.type",
-					"match": "\\b(BEGIN|END|VAR|CONST|IF|WHILE|FOR|END_WHILE|END_IF|END_FOR|UNTIL|REPEAT|SWITCH|END_SWITCH)\\b"
+					"match": "\\b(BEGIN|END|VAR|CONST|IF|WHILE|FOR|END_WHILE|END_IF|END_FOR|UNTIL|REPEAT|SWITCH|END_SWITCH|END_STRUCT)\\b"
 				},
 				{
 					"name": "variable.language",
@@ -44,7 +44,7 @@
 				},
 				{
 					"name": "storage.type",
-					"match": "\\b(CHAR|STRING|ARRAY_OF|BOOLEAN|INTEGER|FLOAT)\\b"
+					"match": "\\b(CHAR|STRING|ARRAY_OF|BOOLEAN|INTEGER|FLOAT|STACK|QUEUE)\\b"
 				},
 				{
 					"name": "constant.numeric",
@@ -56,7 +56,7 @@
 				},
 				{
 					"name": "keyword.operator",
-					"match": "\\b(:=|=|<>|<|>|<=|>=)\\b"
+					"match": "\\b(:=|=|<>|<|>|<=|>=|^)\\b"
 				},
 				{
 					"name": "keyword.control",
@@ -88,7 +88,7 @@
 		},
 		"expression": {
 			"name": "support.function",
-			"match": "Read|Write|Next_Line|Concat|length|Length|ToUpper|ToLower|Succ|Pred|Alloc|Realloc"
+			"match": "Read|Write|Next_Line|Concat|length|Length|ToUpper|ToLower|ToString|ToInteger|ToFloat|Succ|Pred|Alloc|Realloc|push|pop|peek|isEmpty|enqueue|dequeue|isDigit|isLetter"
 		},
 		"params": {
 			"name": "variable.parameter",
